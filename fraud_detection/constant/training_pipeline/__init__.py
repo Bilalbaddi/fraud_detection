@@ -31,7 +31,7 @@ DATA_INGESTION_DATABASE_NAME :str = 'frauddb'
 
 
 '''
-data Transformation constant
+data Validation constant
 '''
 
 DATA_VALIDATION_DIR_NAME : str= 'data_validation'
@@ -40,3 +40,13 @@ DATA_VALIDATION_INVALID_DIR_NAME : str= 'invalid'
 DATA_VALIDATION_DRIFT_REPORT_DIR :str = 'drift_report'
 DATA_VALIDATION_DRIFT_REPORT_FILE_NAME :  str = 'report.yaml'
 
+
+'''
+data Transformation constant
+'''
+DATA_TRANSFORMATION_DIR_NAME : str = "data_transformation"
+DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR : str = "transformed"
+DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR : str = "transformed_object"
+PREPROCESSING_OBJECT_FILE_NAME :str = "preprocessing.pkl"
+DATA_TRANSFORMATION_TRAINED_FILE_PATH : str = 'train.npy'
+DATA_TRANSFORMATION_TEST_FILE_PATH : str = 'test.npy'

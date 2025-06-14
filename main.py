@@ -2,7 +2,8 @@ from fraud_detection.exception.exception import fraud_detection_exception
 from fraud_detection.logger.logging import logging
 from fraud_detection.components.data_ingestion import DataIngestion
 from fraud_detection.components.data_validation import DataValidation
-from fraud_detection.entity.config_entity import DataIngestionConfig,TrainingPipelineConfig,DataValidationConfig
+from fraud_detection.components.data_transformation import DataTansformation
+from fraud_detection.entity.config_entity import DataIngestionConfig,TrainingPipelineConfig,DataValidationConfig,DataTransformationConfig
 import sys
 
 if __name__ == "__main__":
@@ -22,6 +23,12 @@ if __name__ == "__main__":
         data_validation_artifact = data_validation.initiate_data_validation()
         logging.info("Data validation process completed successfully")
         print(data_validation_artifact)
+
+        logging.info("Starting data transformation process")
+        data_transformation_config = DataTransformationConfig(trainingpipelineconfig)
+        data_transformation = DataTansformation(data_validation_artifact=data_validation_artifact, data_transformation_config=data_transformation_config)
+        data_transformation_artifact = data_transformation.initiate_data_transformation()
+        logging.info("Data transformation process completed successfully")
 
     except Exception as e:
         raise fraud_detection_exception(e,sys) from e
