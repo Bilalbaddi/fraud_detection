@@ -1,0 +1,17 @@
+[2025-06-14 12:03:48,174] 13 root - INFO - Starting data ingestion process
+[2025-06-14 12:07:38,390] 79 root - INFO - Data exported to feature store at Artifacts\06-14-2025-12-03-45\fraud_detection\feature_store\fraud.csv
+[2025-06-14 12:07:38,958] 88 root - INFO - Performed tarin test split on the dataframe
+[2025-06-14 12:07:38,959] 94 root - INFO - directory is created
+[2025-06-14 12:07:44,570] 98 root - INFO - Exported train and test data to respective files
+[2025-06-14 12:07:44,584] 111 root - INFO - Data ingestion completed successfully
+[2025-06-14 12:07:44,718] 15 root - INFO - Data ingestion process completed successfully
+[2025-06-14 12:07:44,793] 21 root - INFO - Starting data validation process
+[2025-06-14 12:07:46,121] 27 root - INFO - Number of columns in the schema: 14
+[2025-06-14 12:07:46,121] 28 root - INFO - Number of columns in the dataframe: 14
+[2025-06-14 12:07:46,121] 27 root - INFO - Number of columns in the schema: 14
+[2025-06-14 12:07:46,121] 28 root - INFO - Number of columns in the dataframe: 14
+[2025-06-14 12:07:46,121] 39 root - INFO - Number of columns in the schema: 14
+[2025-06-14 12:07:46,142] 40 root - INFO - Number of columns in the dataframe: 14
+[2025-06-14 12:07:46,174] 39 root - INFO - Number of columns in the schema: 14
+[2025-06-14 12:07:46,193] 40 root - INFO - Number of columns in the dataframe: 14
+[2025-06-14 12:07:54,025] 23 root - INFO - Data validation process completed successfully

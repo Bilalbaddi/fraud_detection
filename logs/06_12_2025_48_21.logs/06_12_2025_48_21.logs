@@ -1,6 +1,0 @@
-[2025-06-12 17:48:23,872] 12 root - INFO - Starting data ingestion process
-[2025-06-12 17:51:30,503] 79 root - INFO - Data exported to feature store at Artifacts\06-12-2025-17-48-22\fraud_detection\feature_store\fraud.csv
-[2025-06-12 17:51:31,066] 88 root - INFO - Performed tarin test split on the dataframe
-[2025-06-12 17:51:31,066] 94 root - INFO - directory is created
-[2025-06-12 17:51:36,301] 98 root - INFO - Exported train and test data to respective files
-[2025-06-12 17:51:36,317] 111 root - INFO - Data ingestion completed successfully

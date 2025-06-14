@@ -13,6 +13,7 @@ TEST_FILE_NAME : str = "test.csv"
 TARGET_COLUMN = 'TX_FRAUD'
 PIPELINE_NAME : str = 'fraud_detection'
 
+SCHEMA_FILE_PATH = os.path.join("Data_schema", "schema.yaml")
 
 
 
@@ -27,3 +28,15 @@ DATA_INGESTION_INGESTED_DIR_NAME : str = 'ingested'
 DATA_INGESTION_TRAIN_TEST_SPLIT_RATIO : float = 0.25
 DATA_INGESTION_COLLECTION_NAME : str = 'fraud_data'
 DATA_INGESTION_DATABASE_NAME :str = 'frauddb'
+
+
+'''
+data Transformation constant
+'''
+
+DATA_VALIDATION_DIR_NAME : str= 'data_validation'
+DATA_VALIDATION_VALID_DIR_NAME :str= 'valid'
+DATA_VALIDATION_INVALID_DIR_NAME : str= 'invalid'
+DATA_VALIDATION_DRIFT_REPORT_DIR :str = 'drift_report'
+DATA_VALIDATION_DRIFT_REPORT_FILE_NAME :  str = 'report.yaml'
+
