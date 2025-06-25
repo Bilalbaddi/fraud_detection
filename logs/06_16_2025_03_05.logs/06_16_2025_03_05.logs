@@ -1,0 +1,7 @@
+[2025-06-16 15:03:05,163] 97 werkzeug - WARNING -  * Debugger is active!
+[2025-06-16 15:03:05,172] 97 werkzeug - INFO -  * Debugger PIN: 909-883-476
+[2025-06-16 15:03:10,964] 97 werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 15:03:10] "GET / HTTP/1.1" 200 -
+[2025-06-16 15:03:12,746] 97 werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 15:03:12] "GET /predictdata HTTP/1.1" 200 -
+[2025-06-16 15:03:29,938] 97 werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 15:03:29] "POST /predictdata HTTP/1.1" 200 -
+[2025-06-16 15:07:49,220] 97 werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 15:07:49] "POST /predictdata HTTP/1.1" 200 -
+[2025-06-16 15:12:16,172] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\BILAL BUDDI\\OneDrive\\Documents\\frauddetection\\app.py', reloading

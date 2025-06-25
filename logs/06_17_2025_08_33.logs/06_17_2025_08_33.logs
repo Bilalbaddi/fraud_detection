@@ -1,0 +1,28 @@
+[2025-06-17 19:08:37,530] 15 root - INFO - Starting data ingestion process
+[2025-06-17 19:11:59,658] 79 root - INFO - Data exported to feature store at Artifacts\06-17-2025-19-08-34\fraud_detection\feature_store\fraud.csv
+[2025-06-17 19:12:00,511] 88 root - INFO - Performed tarin test split on the dataframe
+[2025-06-17 19:12:00,512] 94 root - INFO - directory is created
+[2025-06-17 19:12:10,200] 98 root - INFO - Exported train and test data to respective files
+[2025-06-17 19:12:10,224] 111 root - INFO - Data ingestion completed successfully
+[2025-06-17 19:12:10,350] 17 root - INFO - Data ingestion process completed successfully
+[2025-06-17 19:12:10,449] 23 root - INFO - Starting data validation process
+[2025-06-17 19:12:12,674] 27 root - INFO - Number of columns in the schema: 14
+[2025-06-17 19:12:12,674] 28 root - INFO - Number of columns in the dataframe: 14
+[2025-06-17 19:12:12,674] 27 root - INFO - Number of columns in the schema: 14
+[2025-06-17 19:12:12,674] 28 root - INFO - Number of columns in the dataframe: 14
+[2025-06-17 19:12:12,674] 39 root - INFO - Number of columns in the schema: 14
+[2025-06-17 19:12:12,717] 40 root - INFO - Number of columns in the dataframe: 14
+[2025-06-17 19:12:12,757] 39 root - INFO - Number of columns in the schema: 14
+[2025-06-17 19:12:12,773] 40 root - INFO - Number of columns in the dataframe: 14
+[2025-06-17 19:12:25,601] 25 root - INFO - Data validation process completed successfully
+[2025-06-17 19:12:25,602] 28 root - INFO - Starting data transformation process
+[2025-06-17 19:12:27,660] 70 root - INFO - train and test data has been resd sucessfully
+[2025-06-17 19:12:27,736] 53 root - INFO - Data transformation pipeline created successfully
+[2025-06-17 19:12:28,795] 82 root - INFO - Pca nad std scaler has been app,lied
+[2025-06-17 19:12:29,457] 87 root - INFO - balancing has done sucessfully
+[2025-06-17 19:12:29,845] 32 root - INFO - Data transformation process completed successfully
+[2025-06-17 19:12:29,845] 35 root - INFO - starting model trainng
+[2025-06-17 19:17:09,295] 14 root - INFO - F1 Score: 1.0, Precision: 1.0, Recall: 1.0
+[2025-06-17 19:17:10,435] 14 root - INFO - F1 Score: 1.0, Precision: 1.0, Recall: 1.0
+[2025-06-17 19:17:10,485] 115 root - INFO - model trainer artifact ModelTrainerArtifact(trained_model_file_path='Artifacts\\06-17-2025-19-08-34\\model_trainer\\trained_model\\model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=1.0, precision_score=1.0, recall_score=1.0), test_metric_artifact=ClassificationMetricArtifact(f1_score=1.0, precision_score=1.0, recall_score=1.0))
+[2025-06-17 19:17:10,494] 39 root - INFO - Model Trainer process has completed

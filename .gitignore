@@ -1,0 +1,6 @@
+venv
+.env
+csv_data
+Artifacts/
+/Artifacts
+/data

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fraud Detection System</title>
+    <style>
+        /* Minimal styles focusing on clear display for demonstration */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            color: #2c3e50;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            padding: 30px;
+            border-radius: 12px 12px 0 0;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        button {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 12px;
+            background-color: #f3f4f6;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-align: center;
+            color: #111827;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🛡️ Fraud Detection System</h1>
+            <p>Advanced Machine Learning-Powered Transaction Analysis</p>
+        </div>
+
+        <form action="{{ url_for('predict_datapoint') }}" method="post" id="fraudForm">
+            <label for="TRANSACTION_ID">Transaction ID</label>
+            <input type="number" id="TRANSACTION_ID" name="TRANSACTION_ID" required />
+
+            <label for="TX_AMOUNT">Transaction Amount ($)</label>
+            <input type="number" step="0.01" id="TX_AMOUNT" name="TX_AMOUNT" required />
+
+            <label for="TX_FRAUD_SCENARIO">Fraud Scenario Code</label>
+            <input type="number" id="TX_FRAUD_SCENARIO" name="TX_FRAUD_SCENARIO" required />
+
+            <label for="CUSTOMER_ID">Customer ID</label>
+            <input type="number" id="CUSTOMER_ID" name="CUSTOMER_ID" required />
+
+            <label for="TERMINAL_ID">Terminal ID</label>
+            <input type="number" id="TERMINAL_ID" name="TERMINAL_ID" required />
+
+            <label for="TX_TIME_SECONDS">Transaction Time (Seconds)</label>
+            <input type="number" id="TX_TIME_SECONDS" name="TX_TIME_SECONDS" required />
+
+            <label for="TX_TIME_DAYS">Transaction Time (Days)</label>
+            <input type="number" id="TX_TIME_DAYS" name="TX_TIME_DAYS" required />
+
+            <label for="Year">Year</label>
+            <input type="number" id="Year" name="Year" min="2020" max="2030" required />
+
+            <label for="Month">Month</label>
+            <input type="number" id="Month" name="Month" min="1" max="12" required />
+
+            <label for="Day">Day</label>
+            <input type="number" id="Day" name="Day" min="1" max="31" required />
+
+            <label for="Hour">Hour</label>
+            <input type="number" id="Hour" name="Hour" min="0" max="23" required />
+
+            <label for="Minutes">Minutes</label>
+            <input type="number" id="Minutes" name="Minutes" min="0" max="59" required />
+
+            <label for="Seconds">Seconds</label>
+            <input type="number" id="Seconds" name="Seconds" min="0" max="59" required />
+
+            <button type="submit" id="submitBtn">🔍 Analyze Transaction</button>
+        </form>
+
+        {% if results is not none %}
+        <div class="result">
+            THE prediction is: {{ results }}
+        </div>
+        {% endif %}
+    </div>
+
+    <script>
+        // Autofill date and time fields for user convenience
+        document.addEventListener('DOMContentLoaded', () => {
+            const now = new Date();
+            document.getElementById('Year').value = now.getFullYear();
+            document.getElementById('Month').value = now.getMonth() + 1;
+            document.getElementById('Day').value = now.getDate();
+            document.getElementById('Hour').value = now.getHours();
+            document.getElementById('Minutes').value = now.getMinutes();
+            document.getElementById('Seconds').value = now.getSeconds();
+        });
+
+        // Show loading state when submitting form
+        document.getElementById('fraudForm').addEventListener('submit', function () {
+            const btn = document.getElementById('submitBtn');
+            btn.textContent = '🔍 Analyzing...';
+            btn.disabled = true;
+        });
+    </script>
+</body>
+</html>
+
